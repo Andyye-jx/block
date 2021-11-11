@@ -22,6 +22,6 @@ def assign_address(self, code):
     currency_list = monitor_cache.hgetall(code)
     for i in currency_list:
         address = i.decode()
-        second = random.randrange(0, 10)
+        second = random.randrange(0, 1200)
         query_address_by_etherscan.apply_async((address, code, ), countdown=second)
     return

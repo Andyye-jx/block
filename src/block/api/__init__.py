@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 import logging
 import time
-import jsonobject
 from functools import wraps
 
 from flask import request
@@ -64,8 +63,6 @@ class Api(restful_Api):
                 if isinstance(ori_data, dict) and ori_data.get("echostr"):
                     return self.make_response(int(ori_data.get("echostr")), 200, headers=headers)
                 data['data'] = ori_data
-            elif isinstance(ori_data, jsonobject.JsonObject):
-                data['data'] = ori_data.to_json()
             elif isinstance(ori_data, NoneType):
                 pass
             else:

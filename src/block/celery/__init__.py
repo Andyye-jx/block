@@ -28,12 +28,12 @@ def init_celery(config: Config):
     beat_schedule = {
         "listen_eth_address": {
             "task": "beat_task.assign",
-            "schedule": timedelta(seconds=30),
+            "schedule": timedelta(minutes=20),
             "args": ("eth", )
         },
         "listen_bsc_address": {
             "task": "beat_task.assign",
-            "schedule": timedelta(seconds=30),
+            "schedule": timedelta(minutes=20),
             "args": ("bsc", )
         }
     }
