@@ -60,8 +60,11 @@ class Api(restful_Api):
             data = {'ret': 200}
             if isinstance(ori_data, dict) or isinstance(ori_data, list):
                 # 微信校验返回要求
-                if isinstance(ori_data, dict) and ori_data.get("echostr"):
-                    return self.make_response(int(ori_data.get("echostr")), 200, headers=headers)
+                if isinstance(ori_data, dict):
+                    if ori_data.get("echostr"):
+                        return self.make_response(int(ori_data.get("echostr")), 200, headers=headers)
+                    if ori_data.get("wechat_back"):
+                        return self.make_response(ori_data.get("wechat_back"), 200, headers=headers)
                 data['data'] = ori_data
             elif isinstance(ori_data, NoneType):
                 pass

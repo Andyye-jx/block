@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d835640b-237a-4570-8e49-afd8f0138f66" name="默认变更列表" comment="" />
+    <list default="true" id="d835640b-237a-4570-8e49-afd8f0138f66" name="默认变更列表" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/block/api/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/block/api/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/block/api/notify/wechat.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/block/api/notify/wechat.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,7 +88,7 @@
       <option name="presentableId" value="Default" />
       <updated>1635819661647</updated>
       <workItem from="1635819663075" duration="31279000" />
-      <workItem from="1636442004344" duration="2794000" />
+      <workItem from="1636442004344" duration="5939000" />
     </task>
     <servers />
   </component>

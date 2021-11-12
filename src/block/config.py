@@ -11,11 +11,11 @@ class Config:
 
     database_url = "mysql+pymysql://root:123456@127.0.0.1:3306/block"
     db_pool_size = 10
-    cache_redis_url = "redis://root:123456@120.79.212.133/0"
+    cache_redis_url = "redis://root:123456@127.0.0.1/0"
     # celery_broker_url = "redis://123456@127.0.0.1:6379/6"
     # celery_backend_url = "redis://123456@127.0.0.1:6379/7"
-    celery_broker_url = 'redis://root:123456@120.79.212.133/1'
-    celery_backend_url = 'redis://root:123456@120.79.212.133/2'
+    celery_broker_url = 'redis://root:123456@127.0.0.1/1'
+    celery_backend_url = 'redis://root:123456@127.0.0.1/2'
 
     # scan url
     scan_url = {"eth": "https://cn.etherscan.com/address/", "bsc": "https://bscscan.com/address/"}

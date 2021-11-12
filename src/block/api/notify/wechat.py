@@ -31,16 +31,17 @@ class WeiXinAuth(Resource):
         args = self.post_parser.parse_args()
         xml_data = args.get("xml")
         data = parse_xml(xml_data)
+        resp = {"wechat_back": "success"}
         if not data.get("Content"):
-            return "ok"
+            return resp
         code, address = data.get("Content").split(",")
         if code not in Config.code_list:
-            return "ok"
+            return resp
         if not re.match(Config.eth_re, address):
-            return "ok"
+            return resp
         monitor_cache = inject.instance(RedisCache)
         currencys = monitor_cache.hget(code, address)
         if currencys:
-            return "ok"
+            return resp
         monitor_cache.hset(code, address, json.dumps([]))
-        return "ok"
+        return resp
